@@ -1,0 +1,319 @@
+%-------------------------
+% Resume in Latex
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{vntex}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}%\setmainfont{Times New Roman}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% \usepackage[T1]{fontenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{cochineal}
+% \usepackage{fourier}
+
+% \usepackage{fontspec}
+% \usepackage{polyglossia}
+% \setmainlanguage{german}
+% \setmainfont{Times New Roman}
+
+% serif
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+
+% \pagestyle{fancy}
+% \fancyhf{}  % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSingleSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.1in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------\usepackage{fontspec}
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%----------HEADING----------
+
+
+\begin{center}
+    {\huge NGUYEN NAM HY} \\ \vspace{2pt} 
+
+    {+84389600712 } ~
+    \small{-}
+    \href{mailto:nguyennamhy812@gmail.com}{\color{blue}{nguyennamhy812@gmail.com}} ~ 
+    \small{-}
+    \href{github.com/hvmegy}{ \color{blue}{Github}} ~
+    \small{-}
+    \href{https://codeforces.com/profile/FortuneWillWinICPC}{\color{blue}Codeforces}\\
+    {A third-year student of Data Engineering passionate  about competitive programming} \\
+    \vspace{-7pt}
+
+\end{center}
+
+%-----------EDUCATION-----------
+\section{\color{airforceblue}EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {HCMC University of Technology and Education}{1 Vo Van Ngan, Thu Duc, HCMC}
+      {Data Engineering}{Sep 2022 - Expected: 2026}
+  \resumeSubHeadingListEnd
+  \vspace{-10pt}
+
+%-----------PROGRAMMING SKILLS-----------
+\section{\color{airforceblue}TECHNICAL SKILLS}
+\begin{itemize}[leftmargin=0in, label={}]
+\small{\item{
+    \textbf{\normalsize{Programming Languages:}}{ \normalsize{Python, C++, Java}} \\
+    \vspace{1.2pt}
+    
+    \textbf{\normalsize{Big Data \& Frameworks:}}{ \normalsize{Apache Hadoop, Apache Pig, Apache Spark}} \\
+    \vspace{1.2pt}
+    
+    \textbf{\normalsize{Databases:}}{ \normalsize{SQL Server, MySQL}}\\
+    \vspace{1.2pt}
+    
+    \textbf{\normalsize{Dataframe Library:}}{ \normalsize{Python Pandas}}\\
+    \vspace{1.2pt}
+    
+    \textbf{\normalsize{Version Control:}}{ \normalsize{Git}}\\
+    \vspace{1.2pt}
+    
+    \textbf{\normalsize{Business Intelligence:}}{ \normalsize{Apache Superset}}\\
+    \vspace{1.2pt}
+    
+    \textbf{\normalsize{Cloud Platform:}}{ \normalsize{AWS}}\\
+    \vspace{1.2pt}
+     % copy and paste above textbf block to add more 
+     }}
+ \end{itemize}
+ \vspace{-16pt}
+ 
+
+ %-----------AWARDS \& CERTIFICATES-----------
+\section{\color{airforceblue}AWARDS \& CERTIFICATES}    
+\resumeItemListStart
+
+\vspace{0.5pt}
+
+\resumeItem{\normalsize{\href{https://www.credly.com/badges/660400ac-5b35-44a4-80a1-893f55a33167/public_url}{\color{blue}\textbf{AWS Academy Graduate - AWS Academy Cloud Foundations}}}}  
+\vspace{-5pt}  
+
+\resumeItem{\normalsize{\textbf{Third Prize}, 2024 ICPC Vietnam National Programming Contest}}  
+\vspace{-5pt}  
+
+\resumeItem{\normalsize{\textbf{Second Prize}, 2023 Vietnam Student Informatics Olympiad}}  
+\vspace{-5pt}  
+
+\resumeItem{\normalsize{\textbf{Third Prize}, 2023, 2024 ICPC Vietnam Southern Programming Contest}}  
+\vspace{-5pt}  
+
+\resumeItem{\normalsize{\textbf{Third Prize}, 2024 Da Nang Code League (Top 11 out of 300)}}  
+\vspace{-5pt}  
+
+\resumeItem{\normalsize{\textbf{First Prize}, 2024 HCMUTE Informatics Olympiad}}  
+
+
+    \resumeItemListEnd  
+   
+ \vspace{-12pt}
+%
+
+%-----------Projects---------------
+\section{\color{airforceblue}PROJECTS}
+    \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Katuk}{}
+      {Directory Bookmarking CLI written in Rust}{}
+      \resumeItemListStart
+            \resumeItem{\normalsize{A personal project to familiarize myself with the Rust programming language.}} 
+            \resumeItem{\normalsize{Katuk allows me to quickly navigate my frequently used directories by bookmarking them.}}
+      \resumeItemListEnd  
+
+  \resumeSubHeadingListEnd
+\vspace{-8pt}
+
+%-----------Publications---------------
+\section{\color{airforceblue}PUBLICATIONS}
+    
+\resumeSubHeadingListStart
+\resumeSubheading
+{Khai thác mẫu phổ biến tối đại có trọng số dựa trên cấu trúc N-LIST.}{}
+{VNICT2024: The 27th Vietnam Conference of Selected ICT Problems - VNICT2024. (48) 306-311. 2024.}{}
+\resumeItemListStart
+\resumeItem{\normalsize{My first conference paper which proposed a method to mine maximal frequent itemset in weighted transaction databases. }}
+\resumeItem{\normalsize{Citation: Nguyễn, N. H. et al. (2024). Khai thác mẫu phổ biến tối đại có trọng số dựa trên cấu trúc N-List. Hội Thảo Quốc Gia Lần Thứ XXVII: Một Số Vấn Đề Chọn Lọc Của Công Nghệ Thông Tin Và Truyền Thông.}}
+  \resumeItemListEnd 
+\resumeSubHeadingListEnd
+
+    % copy and paste above resumeItem block to add more 
+    
+      
+\vspace{-8pt}
+
+ %-----------EXPERIENCE-----------
+\section{\color{airforceblue}EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {The IT Olympiad Team HCMC University of Technology and Education}{} 
+      {Member}{Sep 2020 - Now}
+      \resumeItemListStart
+            \resumeItem{\normalsize{Studying competitive programming, algorithms, and data structures.}}
+            \resumeItem{\normalsize{Solving problems and competing in online contests on platforms like \href{https://codeforces.com/}{\color{blue}Codeforces}.}}
+      \resumeItemListEnd  
+
+    \resumeSubheading
+      {\href{https://codeforces.com/profile/FortuneWillWinICPC/}{\color{blue}Codeforces}}{} 
+      {Max rating: 1764}{}
+      \resumeItemListStart
+            \resumeItem{\normalsize{With that peak rating, I have achieved Expert title on Codeforces.}}
+            \resumeItem{\normalsize{Solved over 2000 problems on Codeforces and some other problems on other websites.}}  
+      \resumeItemListEnd  
+
+    \resumeSubheading
+      {\href{https://solved.ac/en/profile/hvmegy}{\color{blue}Solved.ac}}{} 
+      {Rank Diamond II}{}
+      \resumeItemListStart
+            \resumeItem{\normalsize{By solving over 200 problems with mostly at Platinum and Diamond difficulty, I have achieved the rank Diamond.}}
+           
+      \resumeItemListEnd  
+
+    % copy and paste above resumeSubheading block to add more 
+  \resumeSubHeadingListEnd
+\vspace{-12pt}
+
+
+%-----------EXTRACURRICULAR---------------
+\section{\color{airforceblue}EXTRACURRICULAR ACTIVITIES}
+      \resumeItemListStart
+        \resumeItem{\normalsize{\textbf{Competitive Programming Trainer} at Saigon University - {Nov 2024}.}} 
+        \vspace{-5pt}
+        % copy and paste above resumeItem block to add more 
+      \resumeItemListEnd 
+      
+\vspace{-12pt}
+
+\end{document}
